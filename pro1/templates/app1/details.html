@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Details</title>
+{% endblock %}
+
+{% block content %}
+<div class="bg-secondary w-50 mx-auto p-4 mt-4 rounded-5">
+    <h1 class="text-warning text-center">Full Details of {{ obj.fname }} {{ obj.lname }}</h1>
+    <h3 class="text-center">Voter ID: <span style="color:darkorchid;" >{{obj.vid}}</span></h3>
+    <h3 class="text-center">First Name: <span style="color:darkorchid;" >{{obj.fname}}</span></h3>
+    <h3 class="text-center">Last Name: <span style="color:darkorchid;" >{{obj.lname}}</span></h3>
+    <h3 class="text-center">Gender: <span style="color:darkorchid;" >{{obj.gender}}</span></h3>
+    <h3 class="text-center">Address: <span style="color:darkorchid;" >{{obj.address}}</span></h3>
+    <h3 class="text-center">City: <span style="color:darkorchid;" >{{obj.city}}</span></h3>
+    <h3 class="text-center">State: <span style="color:darkorchid;" >{{obj.state}}</span></h3>
+    <h3 class="text-center">Pincode: <span style="color:darkorchid;" >{{obj.pincode}}</span></h3>
+    <h3 class="text-center">BirthDate: <span style="color:darkorchid;" >{{obj.dob}}</span></h3>
+    <h3 class="text-center">Contact: <span style="color:darkorchid;" >{{obj.contact}}</span></h3>
+    <a href="/a1/uv/{{obj.vid}}/"><button class="btn btn-warning col-6">Update</button></a>
+    <a href="/a1/dv/{{obj.vid}}/"><button class="btn btn-danger col-6 float-end">Delete</button></a>
+</div>
+{% endblock %}

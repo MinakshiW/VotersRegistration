@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Show</title>
+{% endblock %}
+
+{% block content %}
+<div class="bg-secondary w-75 mx-auto p-4 mt-4 rounded-5">
+    <h1 class="text-warning text-center">Voters Details</h1>
+    <table class="table table-dark table-striped-columns">
+        <thead>
+            <tr>
+                <th>Voter ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Gender</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Pincode</th>
+                <th>BirthDate</th>
+                <th>Contact</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for v in obj %}
+            <tr>
+                <td>{{v.vid}}</td>
+                <td>{{v.fname}}</td>
+                <td>{{v.lname}}</td>
+                <td>{{v.gender}}</td>
+                <td>{{v.address}}</td>
+                <td>{{v.city}}</td>
+                <td>{{v.state}}</td>
+                <td>{{v.pincode}}</td>
+                <td>{{v.dob}}</td>
+                <td>{{v.contact}}</td>
+                <td>
+                    <a href="/a1/sdv/{{v.vid}}/"><button class="btn btn-success">Show Details</button></a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

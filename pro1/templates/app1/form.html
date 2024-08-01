@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Form</title>
+{% endblock %}
+
+{% block content %}
+<div class="bg-secondary w-50 mx-auto p-5 mt-4 rounded-5">
+    <h1 class="text-warning text-center">Voters Registration Form</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" class="btn btn-success col-6">
+        <input type="reset" class="btn btn-warning col-6 float-end">
+    </form>
+</div>
+{% endblock %}
