@@ -39,3 +39,6 @@ def deleteview(request, y):
         obj.delete()
         return redirect('/a1/sv/')
     return render(request, 'app1/success.html', {'obj': obj})
+
+def errorview(request, exception):
+    return render(request, 'app1/ErrorPagee.html', {}, status=404)
